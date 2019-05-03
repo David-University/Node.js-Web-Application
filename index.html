@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+        <script src="./js/main.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">    
+        <meta charset=utf-8>
+        <title>My photo album</title>
+    </head>
+    
+    <body class=outline>
+        
+        <div id="modal-container">
+            <span id="modal-close">&times;</span>
+            <img src="/" id="modal-content" alt=" ">
+            <div id="modal-text">
+                <div id="modal-caption">Caption here</div>
+                <div id="modal-uploader">Uploaded by: <button id="uploader">...</button> Public ID: <span id="public"></span> </div>
+            </div>
+        </div>
+        
+        <div id="header">
+            <div id="site"><h1 id="sitetext">Photo Album</h1></div>
+            <div id="searchdiv"><input type="submit" value="Search" id="searchBtn"><input type="text" size=20 id="searchbar" placeholder="Photos..."></div>
+            <div id="login">
+                <input id="logbtn" type="submit" value="Login">
+            </div>
+        </div>
+        
+        <div id='container'>  
+        
+            <div id="doubleColumn">
+                <div id='item1'>
+                    
+                    <h3>Locations</h3>
+                    <div id='links1'>
+                        <div><button class="link">Brisbane</button></div>
+                        <div><button class="link">Gold Coast</button></div>
+                        <div><button class="link">London</button></div>
+                        <div><button class="link">Tokyo</button></div>
+                        <div><button class="link">Los Angeles</button></div>
+                    </div>
+                    
+                    <h3>Photo's of the Day</h3>
+                    <div>
+                       <div><button id=interesting>Interesting</button></div> 
+                    </div>
+                    
+                    <div id="current">
+                        <h3>Currently Viewing</h3>
+                        <div><button id="showing">Interesting Photos</button></div>
+                    </div>
+                </div>
+                
+                <div id='item2'>
+            
+            
+                </div>
+            </div>
+            
+            <div id='item3'>
+                
+                <h3>Recently Viewed Images</h3>
+                <div id="rimg">
+                    
+                </div>
+    
+            </div>
+        </div>
+        
+        <footer>
+            <div id="foot">
+                <h2>By David Hallett</h2>
+            </div>
+        </footer>
+        
+    </body>
+
+</html>
