@@ -413,7 +413,7 @@ h2{
 
 /* 1024px */
 
-@media all and (min-width: 1024px){
+@media all and (min-width: 1200px){
     
     #container{
         display:flex;
