@@ -45,7 +45,6 @@ function link_Register(){
             $.get(searchStr,function(data){ 
                 
                 $('#showing').text()
-                //console.log(data);
                 photos = []; // empty the photo array
                 nrequests = data.photos.photo.length;
                 if (nrequests>10){ // limits number of photos to 10 if number of results is greater than 10
@@ -135,7 +134,6 @@ function fetchPhoto(data){
         photos.push(photoObj);
         getSizes(photoObj);
     }
-    console.log(photos); // diplay updated array
 }
 
 
@@ -196,16 +194,13 @@ function modalSizer(buff,index){
     
     //Compares the heights and widths and sets the minimums accordingly
     if(width>height){
-        console.log("branch 1");
         $('#modal-content').css('min-height','0');
         $('#modal-content').css('min-width','60%');
 
     }else if(height>width){
-        console.log("branch 2");
         $('#modal-content').css('min-width','0');
         $('#modal-content').css('min-height','60%');
     }else{
-        console.log("branch 3");
         $('#modal-content').css('min-width','0');
         $('#modal-content').css('min-height','60%');
     }
@@ -214,7 +209,6 @@ function modalSizer(buff,index){
 
 //Registers each thumbnail and sets up the click handler for the thumbnails
 function register_Thumb(){
-    console.log("in thumb register");
     $('.thumb').each(function(index){
         $(this).click(function(){
             //set modal display to visible flex
@@ -227,17 +221,12 @@ function register_Thumb(){
         
             //Grab its uploader id
             let id = $(this).attr('pid');
-            console.log("id");
-            console.log(id);
             
             //flickr photos getinfo
             let getInfoStr = "https://api.flickr.com/services/rest/?method=flickr.photos.getInfo&format=json&nojsoncallback=1&"+API_KEY+"&photo_id="+id;
             
             //Calls flickr function photos.getInfo to get the userID and Username
             $.get(getInfoStr, function(data){
-                console.log("info data");
-                console.log(data);
-                console.log(data.photo.owner.username);
                 $('#uploader').text(data.photo.owner.username);
                 $("#public").text(data.photo.owner.nsid);
             });
